@@ -54,8 +54,13 @@ PRODUCT_PACKAGES += \
     update_engine_sideload \
     update_verifier
 
+# MTK PlPath Utils
+PRODUCT_PACKAGES += \
+    mtk_plpath_utils.recovery
+
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
+    cppreopts.sh 
 
 # Fastbootd
 PRODUCT_PACKAGES += \
