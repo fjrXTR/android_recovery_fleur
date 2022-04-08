@@ -31,5 +31,13 @@ PRODUCT_PACKAGES += \
     otapreopt_script \
     cppreopts.sh \
     update_engine \
-    update_verifier \
-    update_engine_sideload
+    update_engine_sideload \
+    update_verifier
+
+PRODUCT_PACKAGES_DEBUG += \
+    update_engine_client
+
+# Fastbootd
+PRODUCT_PACKAGES += \
+	fastbootd \
+	android.hardware.fastboot@1.0-impl-mock
