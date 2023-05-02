@@ -140,7 +140,7 @@ TARGET_COPY_OUT_SYSTEM_EXT = system_ext
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/system/etc/recovery.fstab
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 TARGET_NO_RECOVERY := true
 BOARD_USES_RECOVERY_AS_BOOT := true
 
