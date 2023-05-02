@@ -57,10 +57,10 @@ BOARD_KERNEL_BASE := 0x40078000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_RAMDISK_OFFSET := 0x07c08000
 BOARD_KERNEL_TAGS_OFFSET := 0x0bc08000
-BOARD_KERNEL_IMAGE_NAME := Image.gz
+BOARD_KERNEL_IMAGE_NAME := kernel
 BOARD_INCLUDE_RECOVERY_DTBO := true
 
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 
@@ -129,9 +129,6 @@ PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := 2099-12-31
 PLATFORM_VERSION := 20.1.0
 
-# Crypto
-TW_INCLUDE_CRYPTO := true
-
 # TWRP Configuration
 TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := true
@@ -151,3 +148,17 @@ TW_EXCLUDE_DEFAULT_USB_INIT := true
 # Debug
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
+
+# Additional binaries & libraries needed for recovery
+TARGET_RECOVERY_DEVICE_MODULES += \
+    libkeymaster4 \
+    libkeymaster41 \
+    libpuresoftkeymasterdevice
+    
+# Decryption
+TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_FBE_METADATA_DECRYPT := true
+TW_RECOVERY_ADDITIONAL_RELINK_LIBRARY_FILES += \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
+	$(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster41.so \
+    $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so
