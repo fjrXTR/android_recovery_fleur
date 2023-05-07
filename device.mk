@@ -54,3 +54,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-service \
     android.hardware.health@2.1-impl
+
+# VNDK
+PRODUCT_TARGET_VNDK_VERSION := 31
