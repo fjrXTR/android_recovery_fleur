@@ -85,3 +85,7 @@ TARGET_RECOVERY_DEVICE_MODULES += \
 RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
     $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so
+
+# Vibrator
+PRODUCT_PACKAGES += \
+	android.hardware.vibrator@1.2-service.mtk.recovery
