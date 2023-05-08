@@ -127,7 +127,7 @@ TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 TW_INCLUDE_REPACKTOOLS := true
-TW_DEVICE_VERSION := gabutuniverse
+TW_DEVICE_VERSION := fjrXTR
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 TARGET_USES_MKE2FS := true
@@ -139,12 +139,12 @@ TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_DEFAULT_BRIGHTNESS := 600
 TW_FRAMERATE := 60
 TW_EXCLUDE_DEFAULT_USB_INIT := true
-TW_NO_HAPTICS := true
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file
 TW_HAS_NO_RECOVERY_PARTITION := true
 TW_EXCLUDE_APEX := true
 TW_SUPPORT_INPUT_1_2_HAPTICS := true
+TW_SUPPORT_INPUT_AIDL_HAPTICS := true
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
